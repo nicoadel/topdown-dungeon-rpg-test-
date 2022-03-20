@@ -10,11 +10,12 @@ public class CameraMotor : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 delta = new Vector3.zero;
+        Vector3 delta = Vector3.zero;
 
 
         //this is to check if we're inside the bounds on the x axis
         float deltaX = lookAt.position.x - transform.position.x;
+
         if (deltaX > boundX || deltaX < -boundX) 
         {
             if(transform.position.x < lookAt.position.x)
@@ -23,13 +24,14 @@ public class CameraMotor : MonoBehaviour
             }
             else
             {
-                delta.x = deltaX + boundX
+                delta.x = deltaX + boundX;
             }
         }
 
 
         //this is to check if we're inside the bounds on the y axis
-        float deltay = lookAt.position.y - transform.position.y;
+        float deltaY = lookAt.position.y - transform.position.y;
+
         if (deltaY > boundY || deltaY < -boundY) 
         {
             if(transform.position.y < lookAt.position.y)
@@ -38,11 +40,11 @@ public class CameraMotor : MonoBehaviour
             }
             else
             {
-                delta.y = deltaY + boundY
+                delta.y = deltaY + boundY;
             }
         }
 
-        transform.position += new Vector3(delta.x, deltaY, 0);
+        transform.position += new Vector3(delta.x, delta.y, 0);
     }
     
 }

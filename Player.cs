@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
 
         moveDelta = new Vector3(x,y,0);
 
-        UnityEngine.Debug.Log(x);
-        UnityEngine.Debug.Log(y);
+        //UnityEngine.Debug.Log(x);
+        //UnityEngine.Debug.Log(y);
 
         //Swap sprite director whether you go left or right
 
